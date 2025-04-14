@@ -4,10 +4,9 @@ import { Product } from "./types";
 interface Props {
     items: Product[];
     updateQuantities: (id: number, quantity: number) => void;
-    removeFromCart: (id: number) => void;
 }
 
-export const Cart: React.FC<Props> = ({ items, updateQuantities, removeFromCart }) => {
+export const Cart: React.FC<Props> = ({ items, updateQuantities }) => {
 
     if (items.length === 0) {
         return <p>Your cart is empty</p>;

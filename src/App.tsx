@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { PRODUCTS, FREE_GIFT, THRESHOLD } from './constants';
 import { ProductList } from './ProductList';
-import { Cart } from './cart';
+import { Cart } from './Cart';
 import { ProgressBar } from './ProgressBar';
 import { Product } from './types';
 import './App.css'
@@ -53,9 +53,6 @@ function App() {
     );
   };
 
-  const removeFromCart = (id: number) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
-  };
   return (
     <div className="app">
       <div>
@@ -65,8 +62,6 @@ function App() {
         <ProductList
           products={PRODUCTS}
           handleAddToCart={handleAddToCart}
-          quantities={quantities}
-          setQuantities={setQuantities}
         />
         <ProgressBar
           subtotal={subtotal}
@@ -83,7 +78,6 @@ function App() {
         <Cart
           items={cart}
           updateQuantities={updateQuantities}
-          removeFromCart={removeFromCart}
         />
       </div>
     </div>

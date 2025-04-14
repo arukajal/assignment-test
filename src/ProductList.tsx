@@ -4,11 +4,9 @@ import { Product } from "./types";
 interface Props{
     products: Product[];
     handleAddToCart: (product: Product) => void;
-    quantities: { [key: number]: number };
-    setQuantities: React.Dispatch<React.SetStateAction<{ [key: number]: number }>>
 }
 
-export const ProductList: React.FC<Props> = ({ products, handleAddToCart, quantities, setQuantities }) => {
+export const ProductList: React.FC<Props> = ({ products, handleAddToCart }) => {
     return(
         <div style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap', flexShrink: 10  }}>
             <div style={{ display: 'flex', justifyContent: 'left', alignItems: 'center'}}>

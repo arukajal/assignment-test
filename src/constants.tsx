@@ -9,4 +9,6 @@ export const PRODUCTS: Product[] = [
   
   export const FREE_GIFT = { id: 99, name: "Wireless Mouse", price: 0 };
   export const THRESHOLD = 1000;
+
+  export const RUPEES = "₹"
   
